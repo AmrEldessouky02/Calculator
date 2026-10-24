@@ -5,6 +5,9 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import org.junit.jupiter.api.Test;
 
 public class DateCheckerTest {
 
@@ -27,5 +30,13 @@ public class DateCheckerTest {
     @Test
     public void testFebruaryDoesNotHave31Days() {
         assertFalse(dateChecker.has31Days(DateChecker.Month.FEBRUARY));
+    }
+
+    @Test
+    public void testNullMonth() {
+
+        assertThrow(IllegalArgumentException.class, () -> {
+            dateChecker.has31Days(null);
+        });
     }
 }

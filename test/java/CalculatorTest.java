@@ -18,23 +18,30 @@ public class CalculatorTest {
     @Test
     public void testSumNegative() {
         int expected = -8;
-        int actual = calculator.sum(-4,-5);
+        int actual = calculator.sum(-4,-4);
         assertEquals(expected, actual);
     }
 
     @Test
     public void testSumZero() {
         int expected = 5;
-        int actual = calculator.sum(4,0);
+        int actual = calculator.sum(5,0);
         assertEquals(expected, actual);
     }
 
     @Test
-    public void testSubtract() {
+    public void testSubtractNegative() {
 
 
         int expected = -1;
         int actual = calculator.subtract(1,2 );
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSubtractPositive() {
+        int expected = 3;
+        int actual = calculator.subtract(4,2);
         assertEquals(expected, actual);
     }
 

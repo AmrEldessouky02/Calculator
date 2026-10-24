@@ -18,7 +18,7 @@ public class Calculator {
     public int divide(int x, int y){
         if(y==0)
         {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Ints can Not be divided by zero");
         }
         return x/y;
 
@@ -27,4 +27,5 @@ public class Calculator {
     public boolean isEven(int i){
         return i%2==0;
     }
+
 }

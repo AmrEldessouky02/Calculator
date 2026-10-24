@@ -41,4 +41,10 @@ public class CalculatorTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void testIsEven() {
+        boolean expected = true;
+        int actual = calculator.isEven(2 );
+        assertEquals(expected, actual);
+    }
 }

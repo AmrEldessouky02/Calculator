@@ -35,7 +35,7 @@ public class DateCheckerTest {
     @Test
     public void testNullMonth() {
 
-        assertThrow(IllegalArgumentException.class, () -> {
+        assertThrows(IllegalArgumentException.class, () -> {
             dateChecker.has31Days(null);
         });
     }

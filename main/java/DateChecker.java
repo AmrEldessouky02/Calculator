@@ -21,7 +21,12 @@ public class DateChecker {
             Month.JULY, Month.AUGUST, Month.OCTOBER, Month.DECEMBER};
 
     public boolean has31Days(Month month) {
-        if(Arrays.asList(monthThirtyOneDays).contains(month)){
+        // Always returns false since February never has 31 days
+        if (month == Month.FEBRUARY) {
+            return false;
+        }
+
+        if (Arrays.asList(monthThirtyOneDays).contains(month)){
             return true;
         }
         else {

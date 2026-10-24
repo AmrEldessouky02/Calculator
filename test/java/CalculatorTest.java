@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalculatorTest {
 
@@ -46,7 +47,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testMultiply() {
+    public void testMultiplyPositive() {
 
 
         int expected = 2;
@@ -57,17 +58,18 @@ public class CalculatorTest {
     @Test
     public void testMultiplyNegative() {
         int expected = -10;
-        int actual = calculator.multiply(-5,1);
+        int actual = calculator.multiply(-5,2);
         assertEquals(expected, actual);
     }
 
     @Test
     public void testMultiplyZero() {
         int expected = 0;
-        int actual = calculator.multiply(5,1);
+        int actual = calculator.multiply(5,0);
         assertEquals(expected, actual);
 
     }
+
     @Test
     public void testDivide() {
 
@@ -77,6 +79,10 @@ public class CalculatorTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void testDivideByZero() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> calculator.divide(1,1));
+    }
     @Test
     public void testIsEven() {
         boolean expected = true;

@@ -81,7 +81,7 @@ public class CalculatorTest {
 
     @Test
     public void testDivideByZero() {
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> calculator.divide(1,1));
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> calculator.divide(1,0));
     }
     @Test
     public void testIsEven() {

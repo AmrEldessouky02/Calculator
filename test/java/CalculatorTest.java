@@ -7,13 +7,28 @@ public class CalculatorTest {
     Calculator calculator = new Calculator();
 
     @Test
-    public void testSum() {
+    public void testSumPositive() {
 
 
         int expected = 3;
         int actual = calculator.sum(1,2 );
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSumNegative() {
+        int expected = -8;
+        int actual = calculator.sum(-4,-5);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSumZero() {
+        int expected = 5;
+        int actual = calculator.sum(4,0);
+        assertEquals(expected, actual);
+    }
+
     @Test
     public void testSubtract() {
 

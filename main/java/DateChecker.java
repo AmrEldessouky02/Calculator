@@ -30,11 +30,6 @@ public class DateChecker {
             return false;
         }
 
-        if (Arrays.asList(monthThirtyOneDays).contains(month)){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return Arrays.asList(monthThirtyOneDays).contains(month);
     }
-}
+    }
